@@ -19,7 +19,7 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
-        font-size: 11px;
+        font-size: .6875rem;
         text-align: center;
       }
       .attribution a {
@@ -29,21 +29,21 @@
     </style>
   </head>
   <body>
-    <main>
+    <div class="header">
       <h1>Simple, traffic-based pricing</h1>
       <p>Sign-up for our 30-day trial.</br> No credit card required. </p>
-      <article>
-        <h2>Pageviews</h2>
+    </div>
+      <main>
+        <h2><span id="page-views"></span> Pageviews</h2>
         <input class="slider" id="slider" type="range" min="0" max="100" value="50">
-        <h3>$ /month</h3>
-        <p>Monthly Billing<input id="toggle-switch" type="checkbox">Yearly Billing<span></span> 25% discount</p>
+        <h3>$<span id="price"></span> /<span id="month">month</span></h3>
+        <p>Monthly Billing<input class="toggle-switch" id="toggle-switch" type="checkbox">Yearly Billing<span></span> 25% discount</p>
   <ul>
-    <li>Unlimited websites</li>
-    <li>100% data ownership</li>
-    <li>Email reports</li>
+    <li><img src="./images/icon-check.svg" alt="check">Unlimited websites</li>
+    <li><img src="./images/icon-check.svg" alt="check">100% data ownership</li>
+    <li><img src="./images/icon-check.svg" alt="check">Email reports</li>
   </ul>
   <button>Start my trial</button>
-    </article>
     </main>
     <div class="attribution">
       Challenge by

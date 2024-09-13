@@ -1,33 +1,30 @@
-import check from "./assets/icon-check.svg";
-
-const Card = () => {
+const Card = ({ data }) => {
   return (
     <>
       <main>
-        <h3>Pageviews</h3>
-        <input type="range" min="0" max="100" value="50" />
-        <h2>month</h2>
+        <h3>{data.pageviews}</h3>
+        <input
+          type={data.slider.type}
+          min={data.slider.min}
+          max={data.slider.max}
+          value={data.slider.value}
+        />
+        <h2>{data.billing.text}</h2>
         <label>
-          Monthly Billing
+          {data.billing.monthly}
           <button></button>
-          Yearly Billing
-          <span>25% </span>
+          {data.billing.yearly}
+          <span>{data.billing.discount}</span>
         </label>
         <ul>
-          <li>
-            <img src={check} />
-            Unlimited websites
-          </li>
-          <li>
-            <img src={check} />
-            100% data ownership
-          </li>
-          <li>
-            <img src={check} />
-            Email reports
-          </li>
+          {data.features.map((i, index) => (
+            <li key={index}>
+              <img src={i.icon} />
+              {i.text}
+            </li>
+          ))}
         </ul>
-        <button></button>
+        <button>{data.button.text}</button>
       </main>
     </>
   );

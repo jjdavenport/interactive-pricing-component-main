@@ -1,0 +1,34 @@
+{
+  "header": "Simple, traffic-based pricing",
+  "subtext": ["Sign-up for our 30-day trial.", "No credit card required."],
+  "pageviews": "Pageviews",
+  "slider": {
+    "type": "range",
+    "min": 0,
+    "max": 100,
+    "value": 50
+  },
+  "billing": {
+    "text": "month",
+    "monthly": "Monthly Billing",
+    "yearly": "Yearly Billing",
+    "discount": "25%"
+  },
+  "features": [
+    {
+      "icon": "./images/icon-check.svg",
+      "text": "Unlimited websites"
+    },
+    {
+      "icon": "./images/icon-check.svg",
+      "text": "100% data ownership"
+    },
+    {
+      "icon": "./images/icon-check.svg",
+      "text": "Email reports"
+    }
+  ],
+  "button": {
+    "text": "Start my free trial"
+  }
+}

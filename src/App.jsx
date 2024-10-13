@@ -6,9 +6,13 @@ import data from "./components/assets/data.json";
 function App() {
   return (
     <>
-      <Header data={data} />
-      <Card data={data} />
-      <Footer />
+      <div className="flex flex-col h-full min-h-screen">
+        <div className="flex flex-col flex-1 items-center">
+          <Header />
+          <Card />
+        </div>
+        <Footer />
+      </div>
     </>
   );
 }

@@ -1,34 +1,38 @@
 {
-  "header": "Simple, traffic-based pricing",
-  "subtext": ["Sign-up for our 30-day trial.", "No credit card required."],
-  "pageviews": "Pageviews",
+  "header": "",
+  "subtext": ["", ""],
+  "pageviews": "",
+  "views": ["10K", "50K", "100K", "500K", "1M"],
   "slider": {
     "type": "range",
     "min": 0,
-    "max": 100,
-    "value": 50
+    "max": 100
+  },
+  "pricing": {
+    "priceMonthly": [8, 12, 16, 24, 36],
+    "priceYearly": [6, 9, 12, 18, 27]
   },
   "billing": {
     "text": "month",
-    "monthly": "Monthly Billing",
-    "yearly": "Yearly Billing",
-    "discount": "25%"
+    "monthly": "",
+    "yearly": "",
+    "discount": "-25%"
   },
   "features": [
     {
       "icon": "./images/icon-check.svg",
-      "text": "Unlimited websites"
+      "text": ""
     },
     {
       "icon": "./images/icon-check.svg",
-      "text": "100% data ownership"
+      "text": ""
     },
     {
       "icon": "./images/icon-check.svg",
-      "text": "Email reports"
+      "text": ""
     }
   ],
   "button": {
-    "text": "Start my free trial"
+    "text": ""
   }
 }

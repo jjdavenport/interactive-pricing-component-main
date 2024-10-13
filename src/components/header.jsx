@@ -1,10 +1,10 @@
-const Header = ({ data }) => {
+const Header = ({}) => {
   return (
     <>
       <header>
-        <h1>{data.header}</h1>
-        <span>{data.subtext[0]}</span>
-        <span>{data.subtext[1]}</span>
+        <h1>Simple, traffic-based pricing</h1>
+        <span>Sign-up for our 30-day trial.</span>
+        <span>No credit card required.</span>
       </header>
     </>
   );

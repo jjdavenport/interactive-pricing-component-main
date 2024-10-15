@@ -14,9 +14,9 @@ const UpperCard = ({
     return (
       <>
         <div className="flex flex-col w-full gap-12 items-center py-10 px-10">
-          <label className="flex flex-col tracking-widest uppercase gap-10 w-full items-center text-grayishBlue ">
+          <label className="flex flex-col tracking-widest gap-10 w-full items-center text-grayishBlue ">
             <div className="flex w-full justify-between items-center">
-              <span>{pageViews} Pageviews</span>
+              <span className="uppercase">{pageViews} Pageviews</span>
               <h2 className="text-5xl flex items-center gap-1">
                 <span className="font-extrabold text-darkDesaturatedBlue">
                   ${price}.00
@@ -53,7 +53,7 @@ const UpperCard = ({
               </button>
               Yearly Billing
               <span className="bg-lightGrayishRed font-extrabold text-xs text-lightRed rounded-full py-1 px-2">
-                -25% Dicount
+                -25% Discount
               </span>
             </label>
           </div>

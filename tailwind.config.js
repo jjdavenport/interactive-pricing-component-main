@@ -1,7 +1,13 @@
+import fluid, { extract, screens } from "fluid-tailwind";
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{html,js,jsx}", "./index.html"],
+  content: {
+    files: ["./src/**/*.{html,js,jsx}", "./index.html"],
+    extract,
+  },
   theme: {
+    screens,
     extend: {
       fontFamily: {
         custom: ["manrope", "sans-serif"],
@@ -23,7 +29,13 @@ export default {
         header: "url('./src/components/assets/bg-pattern.svg')",
         circles: "url('./src/components/assets/pattern-circles.svg')",
       },
+      backgroundPosition: {
+        mobile: "center top 45%",
+      },
+      fontSize: {
+        custom: ".9375rem",
+      },
     },
   },
-  plugins: [],
+  plugins: [fluid],
 };

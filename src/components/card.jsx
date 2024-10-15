@@ -22,57 +22,67 @@ const Card = () => {
 
   return (
     <>
-      <main className="flex flex-col gap-4 items-center">
-        <label className="flex flex-col uppercase gap-8 w-full">
-          {pageViews} Pageviews
-          <input
-            className="slider"
-            value={input}
-            onChange={change}
-            type="range"
-            min="0"
-            max="100"
-            style={{
-              background: `linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) ${fill}%, hsl(223, 50%, 87%) ${fill}%, hsl(223, 50%, 87%) 100%)`,
-            }}
-          />
-        </label>
-        <h2>${price}.00 / month</h2>
-        <div className="flex">
-          <label className="text-grayishBlue flex items-center gap-2">
-            Monthly Billing
-            <button
-              onClick={toggle}
-              className="w-6 h-4 bg-lightGrayishBlue relative rounded-full"
-            >
-              <div
-                className={`${
-                  billing === "month"
-                    ? "translate-x-0 bg-black"
-                    : "translate-x-full bg-white"
-                } w-3 h-3 absolute top-1/2 transform -translate-y-1/2 transition-transform duration-300 rounded-full`}
-              ></div>
-            </button>
-            Yearly Billing -25%
+      <main className="flex flex-col items-center divide-y-[1px] bg-white rounded-xl -mt-10 w-full shadow-lg">
+        <div className="flex flex-col gap-8 items-center py-10">
+          <label className="flex flex-col tracking-widest uppercase gap-8 w-full items-center text-grayishBlue ">
+            {pageViews} Pageviews
+            <input
+              className="slider"
+              value={input}
+              onChange={change}
+              type="range"
+              min="0"
+              max="100"
+              style={{
+                background: `linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 86%, 45%) ${fill}%, hsl(223, 50%, 87%) ${fill}%, hsl(223, 50%, 87%) 100%)`,
+              }}
+            />
           </label>
+          <h2 className="text-4xl flex items-center gap-1">
+            <span className="font-extrabold">${price}.00</span>
+            <span className="text-custom text-grayishBlue">/ month</span>
+          </h2>
+          <div className="flex w-full justify-center">
+            <label className="text-grayishBlue flex items-center gap-2">
+              Monthly Billing
+              <button
+                onClick={toggle}
+                className={`w-12 h-6 bg-lightGrayishBlueToggle relative rounded-full transition duration-300 ease-in-out hover:bg-softCyan`}
+              >
+                <div
+                  className={`
+      w-4 h-4 absolute top-1/2 transform -translate-y-1/2 bg-white rounded-full
+      transition-all duration-300 ease-in-out
+      ${billing === "month" ? "left-1" : "left-[calc(100%-1.25rem-0.125rem)]"}
+    `}
+                ></div>
+              </button>
+              Yearly Billing
+              <span className="bg-lightGrayishRed font-extrabold text-xs text-lightRed rounded-full py-1 px-2">
+                -25%
+              </span>
+            </label>
+          </div>
         </div>
-        <ul>
-          <li className="flex gap-2">
-            <img className="object-contain" src={checkIcon} />
-            Unlimited websites
-          </li>
-          <li className="flex gap-2">
-            <img className="object-contain" src={checkIcon} />
-            100% data ownership
-          </li>
-          <li className="flex gap-2">
-            <img className="object-contain" src={checkIcon} />
-            Email reports
-          </li>
-        </ul>
-        <button className="rounded-full w-fit p-2 bg-darkDesaturatedBlue text-grayishBlue">
-          Start my free trial
-        </button>
+        <div className="flex flex-col gap-8 w-full items-center px-4 py-10">
+          <ul className="flex flex-col gap-2 text-grayishBlue items-center">
+            <li className="flex gap-3 ">
+              <img className="object-contain" src={checkIcon} />
+              Unlimited websites
+            </li>
+            <li className="flex gap-3">
+              <img className="object-contain" src={checkIcon} />
+              100% data ownership
+            </li>
+            <li className="flex gap-3">
+              <img className="object-contain" src={checkIcon} />
+              Email reports
+            </li>
+          </ul>
+          <button className="rounded-full w-fit py-3 px-12 bg-darkDesaturatedBlue hover:text-white transition duration-300 ease-in-out text-paleBlue">
+            Start my trial
+          </button>
+        </div>
       </main>
     </>
   );

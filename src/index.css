@@ -25,6 +25,12 @@
   background-image: url(./components/assets/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.9;
+  box-shadow: 0 0.5rem 0.75rem hsl(174, 77%, 80%);
+}
+
+.slider:focus::-webkit-slider-thumb {
+  opacity: 1;
 }
 
 .slider::-moz-range-thumb {

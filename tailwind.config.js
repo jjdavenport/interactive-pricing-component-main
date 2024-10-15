@@ -26,14 +26,17 @@ export default {
         darkDesaturatedBlue: "hsl(227, 35%, 25%)",
       },
       backgroundImage: {
-        header: "url('./src/components/assets/bg-pattern.svg')",
-        circles: "url('./src/components/assets/pattern-circles.svg')",
+        header: "url('../src/components/assets/bg-pattern.svg')",
+        circles: "url('../src/components/assets/pattern-circles.svg')",
       },
       backgroundPosition: {
         mobile: "center top 45%",
       },
       fontSize: {
         custom: ".9375rem",
+      },
+      backgroundSize: {
+        half: "100% 50%",
       },
     },
   },
